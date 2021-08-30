@@ -1,6 +1,7 @@
 10 OPEN "kjfile.dat" FOR RANDOM ACCESS READ AS #1 LEN = 256
 20 FIELD #1, 2 AS A$, 20 AS B$, 2 AS C$
 30 NR = LOF(1) / 256
+35 CLS : PRINT
 40 FL = 0: INPUT "Enter kanji character to search:", KJ$
 45 IF KJ$ = "" THEN GOTO 130
 50 FOR N = 1 TO NR
